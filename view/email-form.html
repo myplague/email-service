@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=`device-width`, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Send HTML emails</title>
+ <link rel='stylesheet' href='http://bootswatch.com/simplex/bootstrap.min.css' />
+ <style>
+   .jumbotron{
+     padding: 5rem;
+   }
+ </style>
+</head>
+<body>
+ <div class="jumbotron container">
+   <form class='row' action='http://localhost:8082/' method='post'>
+     <div class='col-xs-12'>
+       <div class='form-group'>
+         <label for="to">To:</label>
+         <input type='email' id='to' name='to' class='form-control'/>
+       </div>
+       <div class="form-group">
+         <label for="subject">Subject:</label>
+         <input type="text" id='subject' name='subject' class='form-control'>
+       </div>
+       <div class="form-group">
+         <label for="message">HTML:</label>
+         <textarea name="message" id="message" class='form-control' rows="10"></textarea>
+       </div>
+       <button class='btn btn-primary' type='submit'>Send Email</button>
+     </div>
+   </form>
+ </div>
+</body>
+</html>
